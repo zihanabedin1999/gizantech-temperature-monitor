@@ -1,0 +1,19 @@
+{
+  "name": "gizan-tech-temp-monitor",
+  "version": "1.0.0",
+  "description": "GizanTech Temperature Monitor - Full Stack Application",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "client": "cd frontend && npm start",
+    "server": "cd backend && set NODE_ENV=development&& npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd frontend && npm run build",
+    "start:prod": "set NODE_ENV=production&& npm run build && cd backend && set NODE_ENV=production&& npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
